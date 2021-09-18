@@ -85,5 +85,9 @@ class DelegatingCollection<T> : Collection<T> {
         get() = TODO("Not yet implemented")
 }
 
-class DelegatingCollection2<T>(innerList: Collection<T>)
+class DelegatingCollection2<T>(innerList: Collection<T> = ArrayList<T>()) : Collection<T> by innerList{}
 
+class CountingSet<T>(val innerSet: MutableCollection<T> = HashSet<T>()) : MutableCollection<T> by innerSet {
+    var objectAdded = 0;
+    
+}
