@@ -220,6 +220,11 @@ fun test() {
     println(user4._nickName)
 }
 
-open class User5(val nickName: String)
+open class User5(val nickName: String) {}
+class TwitterUser(nickName: String) : User5(nickName) {}
+
+open class Button3
+
+class Secretive private constructor() {}
 
 
