@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/stl_bjnews"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/app_colorPrimary"
+            android:bind_fits_status_bar="@{true}"
+            app:tl_divider_color="@color/app_white"
+            app:tl_indicator_color="@color/app_white"
+            app:tl_indicator_corner_radius="2dp"
+            app:tl_indicator_margin_top="16dp"
+            app:tl_indicator_width="20dp"
+            app:tl_tab_space_equal="false"
+            app:tl_textSelectColor="@color/app_textPrimary"
+            app:tl_textUnselectColor="@color/app_textHint"
+            app:tl_textsize="14sp" />
+
+        <cn.wj.android.views.viewpager.CustomViewPager
+            android:id="@+id/vp_bjnews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</layout>
