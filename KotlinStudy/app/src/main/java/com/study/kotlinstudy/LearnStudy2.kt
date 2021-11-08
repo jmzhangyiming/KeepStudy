@@ -12,6 +12,8 @@ class LearnStudy2() {
 
 }
 
+private val s = joinToString(listOf(1, 2, 3), separator = ";", prefix = "{", postfix = "}")
+
 fun main(args: Array<String>) {
     val set = hashSetOf(1, 7, 53)
     val list = arrayListOf(1, 7, 53)

@@ -29,7 +29,7 @@ public class JavaStudy1 {
         });
     }
 
-    protected static void hehe() {
+    public static void hehe() {
 
     }
 
