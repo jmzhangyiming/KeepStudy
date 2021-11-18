@@ -1,4 +1,4 @@
-import com.sss.plugin.AndroidX
+import com.sss.plugin.Configuration
 
 plugins {
     id 'com.android.application'
@@ -35,7 +35,7 @@ android {
 }
 
 dependencies {
-    debugImplementation AndroidX.leak_canary_debug
-    releaseImplementation AndroidX.leak_canary_release
+    debugImplementation Configuration.AndroidX.leak_canary_debug
+    releaseImplementation Configuration.AndroidX.leak_canary_release
     implementation project(":base")
 }
