@@ -3,11 +3,12 @@ package com.study.wanandroid.activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.study.wanandroid.R
-import com.study.wanandroid.viewmodel.SplashViewModel
+import com.study.wanandroid.base.ui.BaseActivity
+import com.study.wanandroid.viewmodel.BlankViewModel
 
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : BaseActivity() {
 
-//    private val viewModel: SplashViewModel by viewModel()
+    private val viewModel: BlankViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

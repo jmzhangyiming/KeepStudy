@@ -1,6 +1,10 @@
 package com.study.wanandroid.base.viewmodel
 
-import androidx.lifecycle.ViewModel
+import com.study.ui.viewmodel.BaseLibViewModel
 
-class BaseViewModel : ViewModel(){
+abstract class BaseViewModel : BaseLibViewModel(){
+
+
+
+
 }

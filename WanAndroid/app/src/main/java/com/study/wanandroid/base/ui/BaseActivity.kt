@@ -1,4 +1,6 @@
 package com.study.wanandroid.base.ui
 
-class BaseActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+abstract class BaseActivity : AppCompatActivity() {
 }

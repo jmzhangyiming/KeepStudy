@@ -1,4 +1,7 @@
 package com.study.ui.activity
 
-class BaseLibActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+abstract class BaseLibActivity : AppCompatActivity(){
+
 }

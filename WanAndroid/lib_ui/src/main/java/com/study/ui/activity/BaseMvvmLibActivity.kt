@@ -1,4 +1,4 @@
 package com.study.ui.activity
 
-class BaseMvvmLibActivity {
+abstract class BaseMvvmLibActivity : BaseLibActivity() {
 }

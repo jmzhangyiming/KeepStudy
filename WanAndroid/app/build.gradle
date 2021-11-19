@@ -37,6 +37,9 @@ android {
 dependencies {
     debugImplementation Configuration.AndroidX.leak_canary_debug
     releaseImplementation Configuration.AndroidX.leak_canary_release
-    implementation project(":lib_ui")
+    // Appcompat
+    implementation(Configuration.AndroidX.androidx_appcompat)
+    // kotlin viewmodel
     implementation(Configuration.Kotlin.lifecycle_viewmodel_ktx)
+    implementation project(":lib_ui")
 }
