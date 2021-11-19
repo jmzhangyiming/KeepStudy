@@ -1,11 +1,13 @@
-package com.study.wanandroid
+package com.study.wanandroid.activity
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
+import com.study.wanandroid.R
+import com.study.wanandroid.viewmodel.SplashViewModel
 
 class SplashActivity : AppCompatActivity() {
+
+//    private val viewModel: SplashViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

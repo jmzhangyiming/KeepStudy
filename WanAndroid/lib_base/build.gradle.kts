@@ -1,18 +1,20 @@
-import com.sss.plugin.Configuration
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
 }
 
 android {
     compileSdkVersion 30
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.wanandroid.base"
-        minSdkVersion 30
+        minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -28,16 +30,8 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
-//    buildFeatures {
-//        dataBinding = true
-//    }
 }
 
 dependencies {
-    api(Configuration.AndroidX.appcompat)
-    api(Configuration.AndroidX.core_ktx)
-    api(Configuration.AndroidX.constraintlayout)
-    api(Configuration.AndroidX.permissionx)
-    api(Configuration.Kotlin.lifecycle_viewmodel_ktx)
+
 }
