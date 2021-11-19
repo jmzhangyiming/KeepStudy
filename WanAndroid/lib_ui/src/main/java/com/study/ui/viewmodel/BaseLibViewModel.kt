@@ -1,4 +1,4 @@
-package com.study.ui
+package com.study.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import com.study.base.log.InternalLog
