@@ -1,5 +1,6 @@
 package com.study.base.log
 
+
 /**
  * 内部使用日志打印
  */
@@ -18,7 +19,15 @@ interface Printer {
     fun log(priority: Int, tag: String?, message: String, throwable: Throwable?)
 
     companion object {
-        val DEFAULT_PRINTER:Printer = object
+        val DEFAULT_PRINTER:Printer = object : Printer {
+            override fun log(priority: Int, tag: String?, message: String, throwable: Throwable?) {
+                var msg = message.orEmpty()
+                if (throwable != null && message != null) {
+//                    msg += " : " + throwable.
+                }
+            }
+
+        }
 
     }
 }

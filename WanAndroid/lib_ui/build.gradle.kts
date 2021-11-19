@@ -36,5 +36,7 @@ android {
 }
 
 dependencies {
-
+    // Appcompat,包含viewmodel
+    implementation(Configuration.AndroidX.androidx_appcompat)
+    api(project(":lib_base"))
 }

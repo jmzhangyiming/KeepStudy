@@ -1,4 +1,11 @@
 package com.study.wanandroid.viewmodel
 
-class SplashViewModel {
+import com.study.ui.BaseLibViewModel
+
+
+class SplashViewModel : BaseLibViewModel() {
+
+
+
+
 }

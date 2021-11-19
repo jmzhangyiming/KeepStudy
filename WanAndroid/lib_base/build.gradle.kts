@@ -1,37 +1,46 @@
+import com.sss.plugin.Configuration
 plugins {
-    id 'com.android.library'
-    id 'kotlin-android'
+    id ("com.android.library")
+    kotlin("android")
+    kotlin("kapt")
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    // 编译sdk版本
+    compileSdkVersion(Configuration.AppConfigs.compile_sdk_version)
+
+    // 资源前缀
+    resourcePrefix("base")
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
+        // 最低支持版本
+        minSdkVersion(Configuration.AppConfigs.min_sdk_version)
+        // 目标 SDK 版本
+        targetSdkVersion(Configuration.AppConfigs.target_sdk_version)
     }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    // Java 版本配置
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    // 源文件路径设置
+    sourceSets {
+        named("main") {
+            // 指定java源文件目录为src/main/java和src/main/kotlin
+            java.srcDirs("src/main/java", "src/main/kotlin")
+            jni.srcDirs("libs", "jniLibs")
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
+
+//    buildFeatures {
+//        // DataBinding 开启
+//        dataBinding = true
+//    }
 }
 
 dependencies {
+    api(project(":lib_base"))
+
 
 }
