@@ -37,6 +37,12 @@ android {
 
 dependencies {
     // Appcompat,包含viewmodel
-    implementation(Configuration.AndroidX.androidx_appcompat)
-    api(project(":lib_base"))
+    implementation(Configuration.Dependencies.androidx_appcompat)
+    // 主工程被动引入了androidx.activity:activity:1.2.0-beta01，module必须和主工程一致，否则编译不过
+    implementation ("androidx.activity:activity:1.2.0-beta01")
+    // kotlin viewmodel
+    implementation(Configuration.Dependencies.lifecycle_viewmodel_ktx)
+    // Kotlin 支持
+//    implementation(Configuration.Dependencies.kotlin_sstdlib)
+    api(project(":lib_ui"))
 }

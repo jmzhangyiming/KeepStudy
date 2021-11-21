@@ -40,7 +40,8 @@ android {
 }
 
 dependencies {
-    api(project(":lib_base"))
+    // Kotlin 支持
+    implementation(Configuration.Dependencies.kotlin_stdlib)
 
 
 }

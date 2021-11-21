@@ -20,7 +20,7 @@ object Configuration {
         const val target_sdk_version = 29
     }
 
-    private object AndroidXVersion {
+    object Versions {
         const val appcompat = "1.2.0"
         const val core_version = "1.3.2"
         const val leak_canary = "1.5.4"
@@ -28,26 +28,36 @@ object Configuration {
         const val perimissionx = "1.6.1"
         /** lifecycle 版本*/
         const val lifecycle = "2.3.1"
-    }
-
-    object AndroidX {
-        const val androidx_appcompat = "androidx.appcompat:appcompat:${AndroidXVersion.appcompat}"
-        const val core_ktx = "androidx.core:core-ktx:${AndroidXVersion.core_version}"
-        const val constraintlayout = "androidx.constraintlayout:constraintlayout:${AndroidXVersion.constraintlayout}"
-        const val permissionx = "com.permissionx.guolindev:permission-support:${AndroidXVersion.perimissionx}"
-
-        const val leak_canary_debug = "com.squareup.leakcanary:leakcanary-android:${AndroidXVersion.leak_canary}"
-        const val leak_canary_release = "com.squareup.leakcanary:leakcanary-android-no-op:${AndroidXVersion.leak_canary}"
-    }
-
-    private object KotlinVersion {
-
-
+        /** activity 版本 */
+        const val activity_version = "1.1.0"
+        const val kotlin_version = "1.5.20"
+        /** koin 版本 */
+        const val koin_version = "2.2.1"
 
     }
 
-    object Kotlin {
-        // livedata kotlin版本
-        const val lifecycle_viewmodel_ktx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${AndroidXVersion.lifecycle}"
+    /**
+     * 依赖
+     */
+    object Dependencies {
+        const val androidx_appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
+        const val core_ktx = "androidx.core:core-ktx:${Versions.core_version}"
+        const val constraintlayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
+        const val permissionx = "com.permissionx.guolindev:permission-support:${Versions.perimissionx}"
+
+        const val leak_canary_debug = "com.squareup.leakcanary:leakcanary-android:${Versions.leak_canary}"
+        const val leak_canary_release = "com.squareup.leakcanary:leakcanary-android-no-op:${Versions.leak_canary}"
+        const val kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin_version}"
+        // viewmodel kotlin版本
+        const val lifecycle_viewmodel_ktx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
+        // koin
+        const val koin_scope = "org.koin:koin-androidx-scope:${Versions.koin_version}"
+        // koin与viewmodel结合
+        const val koin_viewmodel = "org.koin:koin-androidx-viewmodel:${Versions.koin_version}"
+        // 扩展功能
+        const val koin_ext = "org.koin:koin-androidx-ext:${Versions.koin_version}"
+        /** androidx activity */
+        const val androidx_activity = "androidx.activity:activity:${Versions.activity_version}"
+        const val androidx_activity_ktx = "androidx.activity:activity-ktx:${Versions.activity_version}"
     }
 }

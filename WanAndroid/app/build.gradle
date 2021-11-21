@@ -35,11 +35,22 @@ android {
 }
 
 dependencies {
-    debugImplementation Configuration.AndroidX.leak_canary_debug
-    releaseImplementation Configuration.AndroidX.leak_canary_release
+    debugImplementation Configuration.Dependencies.leak_canary_debug
+    releaseImplementation Configuration.Dependencies.leak_canary_release
     // Appcompat
-    implementation(Configuration.AndroidX.androidx_appcompat)
+    implementation(Configuration.Dependencies.androidx_appcompat){
+        // 1.2.0的appcompat会自动导入1.0.0的androidx.activity：activity，与包中其它引入的包
+        // androidx.activity：activity:1.2.0-beta01冲突
+        exclude group: "androidx.activity", module:"activity"
+    }
     // kotlin viewmodel
-    implementation(Configuration.Kotlin.lifecycle_viewmodel_ktx)
+    implementation(Configuration.Dependencies.lifecycle_viewmodel_ktx)
+    // koin
+    implementation(Configuration.Dependencies.koin_scope)
+    // koin-viewmodel
+    implementation(Configuration.Dependencies.koin_viewmodel)
+    //
+    implementation(Configuration.Dependencies.koin_ext)
+//    implementation(Configuration.Dependencies.androidx_activity_ktx)
     implementation project(":lib_ui")
 }

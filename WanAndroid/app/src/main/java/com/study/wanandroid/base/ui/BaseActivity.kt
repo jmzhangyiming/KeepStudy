@@ -1,6 +1,7 @@
 package com.study.wanandroid.base.ui
 
-import androidx.appcompat.app.AppCompatActivity
+import com.study.ui.activity.BaseBindingLibActivity
 
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity : BaseBindingLibActivity() {
+
 }

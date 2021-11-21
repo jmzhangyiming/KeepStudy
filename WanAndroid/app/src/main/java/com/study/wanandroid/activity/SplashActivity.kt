@@ -8,7 +8,9 @@ import com.study.wanandroid.viewmodel.BlankViewModel
 
 class SplashActivity : BaseActivity() {
 
-    private val viewModel: BlankViewModel by viewModel()
+//    private val viewModel: BlankViewModel by viewModel()
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
