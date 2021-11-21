@@ -51,6 +51,5 @@ dependencies {
     implementation(Configuration.Dependencies.koin_viewmodel)
     //
     implementation(Configuration.Dependencies.koin_ext)
-//    implementation(Configuration.Dependencies.androidx_activity_ktx)
     implementation project(":lib_ui")
 }

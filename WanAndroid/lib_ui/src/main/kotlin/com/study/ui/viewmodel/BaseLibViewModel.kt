@@ -1,7 +1,7 @@
 package com.study.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.study.base.log.InternalLog
+
 
 abstract class BaseLibViewModel : ViewModel() {
 
