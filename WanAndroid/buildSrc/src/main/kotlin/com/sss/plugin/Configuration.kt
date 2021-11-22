@@ -59,5 +59,8 @@ object Configuration {
         /** androidx activity */
         const val androidx_activity = "androidx.activity:activity:${Versions.activity_version}"
         const val androidx_activity_ktx = "androidx.activity:activity-ktx:${Versions.activity_version}"
+
+        /** androidx material */
+        const val androidx_material = "com.google.android.material:material:1.2.1"
     }
 }

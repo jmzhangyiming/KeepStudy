@@ -44,5 +44,5 @@ dependencies {
     implementation(Configuration.Dependencies.lifecycle_viewmodel_ktx)
     // Kotlin 支持
 //    implementation(Configuration.Dependencies.kotlin_sstdlib)
-    api(project(":lib_ui"))
+    api(project(":lib_base"))
 }
