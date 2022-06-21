@@ -113,6 +113,7 @@ class AlgotithmJava1 {
                 result[1] = -1;
                 return result;
             }
+            return result;
         }
     }
 
