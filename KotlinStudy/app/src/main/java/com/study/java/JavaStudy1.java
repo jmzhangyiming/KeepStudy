@@ -20,6 +20,7 @@ public class JavaStudy1 {
 
 //        CaseInsenssitiveFileComparator.INSTANCE.compare();
         LearnStudy8Kt.processTheAnswer((it, he) -> it + he);
+        System.out.println("111");
 
         List<String> strings = new ArrayList<>();
         strings.add("42");
