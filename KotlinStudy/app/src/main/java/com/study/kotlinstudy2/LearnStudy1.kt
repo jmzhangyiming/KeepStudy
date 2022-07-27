@@ -10,6 +10,8 @@ fun main(args: Array<String>) {
     val oldest = persons.maxBy { it.age ?: 0 }
     println("The olest is: $oldest")
 
+    val person = Person21("Bob", false)
+    println(person.name)
 
 
 }
@@ -18,5 +20,12 @@ fun max(a: Int, b: Int): Int {
     return if(a > b) a else b
 }
 
-class Person21(val name: String)
+class Person21(val name: String, val isMarried: Boolean)
+
+class Rectangle(val height: Int, val width: Int) {
+    val isSquare: Boolean
+        get() {
+            return height == width
+        }
+}
 
