@@ -113,9 +113,16 @@ class AlgotithmJava1 {
                 result[1] = -1;
                 return result;
             }
+            return result;
         }
     }
 
+    /**
+     * 单例模式
+     */
+    // 饿汉
+    public class Singleton {
 
+    }
 
 }
