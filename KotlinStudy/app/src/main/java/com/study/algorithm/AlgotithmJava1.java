@@ -122,6 +122,15 @@ class AlgotithmJava1 {
      */
     // 饿汉
     public class Singleton {
+<<<<<<< HEAD
+=======
+//        private static Singleton singleton = new Singleton();
+//
+//        private Singleton() {
+//
+//        }
+
+>>>>>>> 772ed6e2c644f002d51321e9185fd53ccd20c2f6
 
     }
 
