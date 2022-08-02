@@ -117,18 +117,4 @@ class AlgotithmJava1 {
         }
     }
 
-    /**
-     * 单例模式
-     */
-    // 饿汉
-    public class Singleton {
-//        private static Singleton singleton = new Singleton();
-//
-//        private Singleton() {
-//
-//        }
-
-
-    }
-
 }
