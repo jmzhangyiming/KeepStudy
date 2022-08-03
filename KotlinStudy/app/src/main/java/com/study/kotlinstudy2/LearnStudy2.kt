@@ -153,6 +153,16 @@ fun eval(e: Expr2): Int =
         is Expr2.Sum -> eval(e.left) + eval(e.right)
     }
 
+class User2 constructor(_nickName: String) {
+    val nickName: String
+    init {
+        nickName = _nickName
+    }
+}
+
+class User3(_nickName: String) {
+    val nickName = _nickName
+}
 
 
 
