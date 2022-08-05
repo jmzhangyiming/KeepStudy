@@ -31,8 +31,8 @@ class AlgotithmJava1 {
      */
     public static class Solution1 {
         public static void sort(int[] arr) {
-            for (int i = 0; i < arr.length - 1; i ++) {
-                for (int j = 0; j < arr.length - 1 - i; j ++) {
+            for (int i = 0; i < arr.length - 1; i++) {
+                for (int j = 0; j < arr.length - 1 - i; j++) {
                     if (arr[j] > arr[j + 1]) {
                         int temp = arr[j];
                         arr[j] = arr[j + 1];
@@ -66,11 +66,11 @@ class AlgotithmJava1 {
             int temp = arr[low];
             while (low < high) {
                 while (low < high && arr[high] >= temp) {
-                    high --;
+                    high--;
                 }
                 arr[low] = arr[high];
                 while (low < high && arr[low] <= temp) {
-                    low ++;
+                    low++;
                 }
                 arr[high] = arr[low];
             }
@@ -89,23 +89,23 @@ class AlgotithmJava1 {
      * 你需要实现的函数twoSum需要返回这两个数的下标, 并且第一个下标小于第二个下标。注意这里下标的范围是 0 到 n-1。
      * 你可以假设只有一组答案。
      * 样例：
-     输入：
-     numbers = [2,7,11,15]
-     target = 9
-     输出：
-     [0,1]
-     解释：
-     numbers[0] + numbers[1] = 9
+     * 输入：
+     * numbers = [2,7,11,15]
+     * target = 9
+     * 输出：
+     * [0,1]
+     * 解释：
+     * numbers[0] + numbers[1] = 9
      * 样例：
-     输入：
-     numbers = [15,2,7,11]
-     target = 9
-     输出：
-     [1,2]
-     解释：
-     numbers[1] + numbers[2] = 9
+     * 输入：
+     * numbers = [15,2,7,11]
+     * target = 9
+     * 输出：
+     * [1,2]
+     * 解释：
+     * numbers[1] + numbers[2] = 9
      */
-    public static class  Solution3 {
+    public static class Solution3 {
         public static int[] twoSum(int[] numbers, int target) {
             int[] result = new int[2];
             if (numbers.length < 2) {

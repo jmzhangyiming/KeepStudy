@@ -81,23 +81,23 @@ enum class Color(val r: Int, val g: Int, val b: Int) {
 }
 
 fun getMnemonic(color: Color) =
-    when(color) {
-        Color.ORANGE , Color.GREEN -> "is"
-        Color.RED -> "Richard"
-    }
+        when(color) {
+            Color.ORANGE , Color.GREEN -> "is"
+            Color.RED -> "Richard"
+        }
 
 fun mix(c1: Color, c2: Color) =
-    when(setOf(c1, c2)) {
-        setOf(Color.RED, Color.ORANGE) -> "mix1"
-        else -> "111"
-    }
+        when(setOf(c1, c2)) {
+            setOf(Color.RED, Color.ORANGE) -> "mix1"
+            else -> "111"
+        }
 
 fun mixOptimized(c1: Color, c2: Color) =
-    when {
-        (c1 == Color.GREEN && c2 == Color.ORANGE) -> "mix1"
-        (c1 == Color.ORANGE && c2 == Color.RED) -> "mix2"
-        else -> throw Exception("Dirty color")
-    }
+        when {
+            (c1 == Color.GREEN && c2 == Color.ORANGE) -> "mix1"
+            (c1 == Color.ORANGE && c2 == Color.RED) -> "mix2"
+            else -> throw Exception("Dirty color")
+        }
 
 interface Expr
 class Num(val value: Int) : Expr
@@ -114,18 +114,18 @@ fun eval(e: Expr): Int {
 }
 
 fun eval2(e: Expr): Int =
-    when(e) {
-        is Num -> e.value
-        is Sum -> eval2(e.right) + eval2(e.left)
-        else -> throw IllegalArgumentException("UnKnown expression")
-    }
+        when(e) {
+            is Num -> e.value
+            is Sum -> eval2(e.right) + eval2(e.left)
+            else -> throw IllegalArgumentException("UnKnown expression")
+        }
 
 fun fizzBuzz(i: Int) = when {
     i % 15 == 0 -> "fizzBuzz"
     i % 3 == 0 -> "fizz"
     i % 5 == 0 -> "buzz"
     else -> "$i"
- }
+}
 
 fun String.lastChar() = get(length - 1)
 
