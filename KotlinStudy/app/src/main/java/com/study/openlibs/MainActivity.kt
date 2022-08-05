@@ -3,6 +3,8 @@ package com.study.openlibs
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import com.study.kotlinstudy.R
 import com.study.kotlinstudy.User
 import com.study.kotlinstudy.databinding.ActivityMainBinding
@@ -14,7 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         binding.user = UserBean("111", "222", "333")
-
+        findNavController()
+        FragmentNavigatorExtras()
     }
 
 }
