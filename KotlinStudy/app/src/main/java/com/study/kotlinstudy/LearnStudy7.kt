@@ -2,12 +2,9 @@ package com.study.kotlinstudy
 
 import android.os.Build
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.ActionBarDrawerToggle
-import com.google.android.material.circularreveal.CircularRevealHelper
 import java.beans.PropertyChangeListener
 import java.beans.PropertyChangeSupport
 import java.lang.IndexOutOfBoundsException
-import java.lang.reflect.Type
 import java.time.LocalDate
 
 class Point2(val x: Int, val y: Int) {
